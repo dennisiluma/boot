@@ -38,7 +38,7 @@ public class PersonController {
     public void deletePerson(@PathVariable("id") UUID id){
         personService.deletePerson(id);
     }
-    @PutMapping(path = "{id}")
+    @PutMapping(path = "{id}/edit")
     public void updatePerson(@PathVariable("id") UUID id, @Validated @NonNull @RequestBody Person newPerson){ //we are saying the newPerson should not be null and valid
         personService.updatePerson(id, newPerson);
 
